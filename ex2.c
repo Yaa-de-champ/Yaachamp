@@ -452,32 +452,116 @@
 // }
 
 
-int main() {
-    int planet = 4; //Little Mac is already on planet Earth.  
+// int main() {
+//     int planet = 4; //Little Mac is already on planet Earth.  
 
-switch (planet) {
-  case 1: // planet 1  is mercury
-    printf("0.38");
-    break;
-  case 2: // planet 2 is Venus
-    printf("0.91");
-    break;
-  case 3: // planet 3 is Mars
-    printf("0.38");
-    break;
-  case 4: //planet 4 is Jupiter
-    printf("2.34");
-    break;
-  case 5: //planet 5 is Saturn
-    printf("1.06");
-    break;
-  case 6: //planet 6 is Uranus
-    printf("0.92");
-    break;
-  case 7: //planet 7 is Neptune
-    printf("1.19");
-    break;
-}
+// switch (planet) {
+//   case 1: // planet 1  is mercury
+//     printf("0.38");
+//     break;
+//   case 2: // planet 2 is Venus
+//     printf("0.91");
+//     break;
+//   case 3: // planet 3 is Mars
+//     printf("0.38");
+//     break;
+//   case 4: //planet 4 is Jupiter
+//     printf("2.34");
+//     break;
+//   case 5: //planet 5 is Saturn
+//     printf("1.06");
+//     break;
+//   case 6: //planet 6 is Uranus
+//     printf("0.92");
+//     break;
+//   case 7: //planet 7 is Neptune
+//     printf("1.19");
+//     break;
+// }
 
 
-}
+// }
+
+
+// int main() {
+//   int pin = 0;
+//   int tries = 0;
+
+//   printf("BANK OF CODECADEMY:\n");
+//   printf("Enter your PIN: ");
+//   scanf("%d", &pin);
+
+//   tries++;
+
+//   while (pin != 1234 && tries < 3) {
+
+//     printf("Enter your PIN: ");
+
+//     scanf("%d", &pin);
+//     tries++;
+//   }
+
+//   if (pin == 1234) {
+//     printf("PIN accepted!\n");
+//     printf("You now have access.\n");
+//   }
+// }
+
+
+
+// int main() {
+//   int i = 0;
+
+//   while (i < 5) {
+//   printf("%d\n", i);
+//   i++;
+//   }
+// }
+
+// int main() {
+//   int i = 0;
+//   while (i < 5) {
+//     printf("today is my birthday\n");
+//     i++;
+//   }
+// }
+
+// #include <stdio.h>
+
+// int main() {
+
+//   int guess;
+//   int tries = 0;
+
+//   printf("I'm thinking of a number in the range 1-10.\n");
+//   printf("Try to guess it: ");
+//   scanf("%d", &guess);
+
+//   // Write a while loop here:
+//  while (guess != 8 && tries < 5 )  {
+//    printf("Try to guess it:");
+//    scanf("%d", &guess);    
+//  }
+
+
+
+//   if (guess == 8) {
+//     printf("You got it!\n");
+//   }
+// }
+
+// int main() {
+//     // Create an integer variable that will store the number we get from the user
+// int myNum;
+
+// // Ask the user to type a number
+// printf("Type a number: \n");
+
+// // Get and save the number the user types
+// scanf("%d", &myNum);
+
+// // Output the number the user typed
+// printf("Your number is: %d", myNum);
+
+// }
+
