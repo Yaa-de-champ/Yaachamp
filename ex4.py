@@ -388,18 +388,53 @@
 # data = marks_data(mark_scores)
 # # print(data)
 
+
 # highest = data[0]
 # smallest = data[1]
 # print(f"smallest score: {smallest}")
 # print(f"highest score: {highest} ")
 
 
-def get_top_three(bballplayers):
-    return bballplayers[0],  bballplayers[1], bballplayers[2]
+# def get_top_three(bballplayers):
+#     return bballplayers[0],  bballplayers[1], bballplayers[2]
 
-bballplayers = ["Cecil", "Randy", "Dave", "William"]
-top_three = get_top_three(bballplayers)
+# bballplayers = ["Cecil", "Randy", "Dave", "William"]
+# top_three = get_top_three(bballplayers)
 
-print(f"First: {top_three[0]}")
-print(f"Second: {top_three[1]}")
-print(f"Third: {top_three[2]}")
+# print(f"First: {top_three[0]}")
+# print(f"Second: {top_three[1]}")
+# print(f"Third: {top_three[2]}")
+
+
+# print('first line\nsecond line')
+
+# fruits = ['apple', 'banana', 'cherry']
+# for i in range(len(fruits)):
+#     print(fruits[i].upper())
+
+# family = {'dad':'homer', 'mom':'marge', 'size':6}
+# for key, value in family.items():
+#      print(key, value)
+
+
+# # for/else loop
+# fruits = ['apple', 'banana', 'cherry']
+# for fruit in fruits:
+#     if fruit == 'banana':
+#         print("Found the banana!")
+#         break # exit the loop and skip the 'else' block
+#     else:
+# # this block executes ONLY if the for loop completes without hitting 'break'
+#         print("Can't find the banana")
+
+
+
+# fruits = ['apple', 'banana', 'cherry']
+# for index, fruit in enumerate(fruits):
+#     print(index, fruit)
+
+
+# def square_this(x):
+#     return x ** 2
+# square_this(3)
+
