@@ -565,3 +565,7 @@
 
 // }
 
+int main() {
+    int x = 23;
+    printf("My mum bought %d oranges", x);
+}
