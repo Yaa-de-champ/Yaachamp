@@ -9,5 +9,5 @@
 - 📫 How to reach me: Through my personal and active [Email](dokuamponsahnanayaaadomaa@gmail.com)
 - 😄 Pronouns: She/Her
 - ⚡ Fun fact: I am a very curious learner and always encourage myself by speaking to myself.
--->😌 Hobbies: I love reading and exploring outside my field of study.
+- 😌 Hobbies: I love reading and exploring outside my field of study.
 
