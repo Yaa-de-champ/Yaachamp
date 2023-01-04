@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-<!--
+
 **Yaa-de-champ/Yaa-de-champ** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -9,7 +9,7 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning some programming languages such as HTML & CSS, Python, JavaScript and C programming as skills.
 - 👯 I’m looking forward to collaborating on any fun project involving the programming languages I have mentioned above.
 - 🤔 I’m looking for help with how to create and implement Machine Learning or Artificial Intelligence Projects (using Python)
-- 💬 Let's connect on Linkden(https://www.linkedin.com/in/nana-yaa-adomaa-doku-amponsah-078854235)
+- 💬 Let's connect on [Linkden](https://www.linkedin.com/in/nana-yaa-adomaa-doku-amponsah-078854235)
 - 📫 How to reach me: Through my personal and active email dokuamponsahnanayaaadomaa@gmail.com
 - 😄 Pronouns: She/Her
 - ⚡ Fun fact: I am a very curious learner and always encourage myself by speaking to myself.
