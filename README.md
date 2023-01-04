@@ -1,10 +1,6 @@
 ### Hi there 👋
 
 
-**Yaa-de-champ/Yaa-de-champ** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
 - 🔭 I’m currently an undergraduate biomedical engineering student 
 - 🌱 I’m currently learning some programming languages such as HTML & CSS, Python, JavaScript and C programming as skills.
 - 👯 I’m looking forward to collaborating on any fun project involving the programming languages I have mentioned above.
