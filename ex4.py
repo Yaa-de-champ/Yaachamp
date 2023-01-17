@@ -438,3 +438,42 @@
 #     return x ** 2
 # square_this(3)
 
+#removing duplicates from a list
+grocery_list = ["cabbage", "tomato", "pepper", "cabbage", "onion"]
+print(set(grocery_list))
+
+
+
+#or we can store the set(grocery_list) in a variable to make it reuseable
+grocery_list = ["cabbage", "tomato", "pepper", "cabbage", "onion"]
+grocery_set = set(grocery_list)
+print(grocery_set)
+
+
+
+# just like list we can get the size of a set
+stationeries = ["pencils", "a reading book", "sharpener", "ruler"]
+print(len(stationeries))
+
+
+
+stationeries = {"pencils", "a reading book", "sharpener", "ruler"}
+my_stationeries = {"pencils", "a reading book"}
+his_stationeries = {"pencils", "erasers"}
+# print(len(stationeries))
+print(my_stationeries.issubset(stationeries))
+print(his_stationeries.issubset(stationeries))
+
+
+
+
+stationeries = {"pencils", "a reading book", "sharpener", "ruler"}
+my_stationeries = {"pencils", "a reading book"}
+his_stationeries = {"pencils", "erasers"}
+
+Mine= my_stationeries.issubset(stationeries)
+His = his_stationeries.issubset(stationeries)
+
+print(Mine)
+print(His)
+print(f"{len(stationeries)} stationeries available")
