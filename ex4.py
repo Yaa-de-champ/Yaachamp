@@ -477,3 +477,41 @@ His = his_stationeries.issubset(stationeries)
 print(Mine)
 print(His)
 print(f"{len(stationeries)} stationeries available")
+
+
+# it is possible to join sets using the word union
+bmenmates = {"Lois", "James"}
+friends = {"Cecil", "Sefakor", "Lois"}
+everyone = bmenmates.union(friends)
+print(everyone)
+
+#  we can use intersection() to create a set of elements that are present in both sets
+bmenmates = {"Lois", "Cecil", "Sefakor"}
+friends = {"Lois", "Cecil", "Sefakor", "Chelsea"}
+common_names = bmenmates.intersection(friends)
+print(common_names)
+
+# While union() gives us all elements of the two sets, intersection() gives us only the common ones.
+
+even_numbers = {2, 4, 6, 8, 10, 12, 14, 16}
+odd_numbers = {3, 5, 7, 9, 11, 13, 15}
+print(even_numbers.union(odd_numbers))
+
+
+
+bmenmates = {"Lois", "James"}
+friends = {"Cecil", "Sefakor", "Lois"}
+# everyone = bmenmates.union(friends)
+
+# to get a set of elements that are present in classmates, but not in friends, we use the difference() instruction.
+friends_not_classmates = bmenmates.difference(friends)
+print(friends_not_classmates)
+
+
+# example from mimo
+andy_classes = {"french", "ballet"}
+may_classes = {"drums", "pottery"}
+# use difference() with andy_classes on the left, to get the items that are in the andy_classes without being on may_classes.
+
+print(andy_classes.difference(may_classes))
+print(may_classes.difference(andy_classes))
