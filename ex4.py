@@ -498,7 +498,7 @@ odd_numbers = {3, 5, 7, 9, 11, 13, 15}
 print(even_numbers.union(odd_numbers))
 
 
-
+# ------------------newline-----------
 bmenmates = {"Lois", "James"}
 friends = {"Cecil", "Sefakor", "Lois"}
 # everyone = bmenmates.union(friends)
@@ -515,3 +515,46 @@ may_classes = {"drums", "pottery"}
 
 print(andy_classes.difference(may_classes))
 print(may_classes.difference(andy_classes))
+
+# --------------newline-----------
+prices = [10, 38, 40, 58, 62]
+halved = []
+
+for price in prices:
+  half_price = price/2
+  halved.append(half_price)
+
+print(halved)
+
+# ----------newline--------------
+
+prices = [10, 38, 40, 58, 62]
+halved = [price/2 for price in prices]
+print(halved)
+
+# -----------newline----------------------------------------------------------------
+
+
+prices = [10, 38, 40, 58, 62]
+# A list comprehension is a way to create a new list like halved by applying an expression on each element of an existing list, like  prices.
+# List comprehensions use for loops to iterate through each element of the original list, like here with for price in prices.
+# Like with any for-loop, price is the variable that holds the list elements one by one, while prices is the list we're looping over.
+# At the beginning of the list comprehension, we write an expression to apply on each element, like halving each price with price/2.
+
+
+halved_lc = [price/2 for price in prices]
+print(halved_lc)
+
+
+# -----------newline------------------------------------------------------------------
+# this is a for loop to aid you get ...its output will give you the same answer as the list comprehension above
+halved_loop = []
+for price in prices:
+  half_price = price/2
+  halved_loop.append(half_price)
+
+print(halved_loop)
+
+# ----------------newline------------
+
+
