@@ -542,8 +542,8 @@ prices = [10, 38, 40, 58, 62]
 # At the beginning of the list comprehension, we write an expression to apply on each element, like halving each price with price/2.
 
 
-halved_lc = [price/2 for price in prices]
-print(halved_lc)
+# halved_lc = [price/2 for price in prices]
+# print(halved_lc)
 
 
 # -----------newline------------------------------------------------------------------
@@ -568,6 +568,108 @@ if student_ID == "10947512" and student_name == "Doku-Amponsah Nana Yaa Adomaa":
 else:
   print("Invalid details! Retry🙂")
 
+# ----------------------newline😘-----------------------------------
+flights = ["1122", "5788", "0044"]
+
+
+codes_a = ["BA" + flight for flight in flights]
+print(codes_a)
+
+
+codes_b = []
+for flight in flights:
+  code = "BA" + flight
+  codes_b.append(code)
+
+print(codes_b)
+
+# ---------------------------------------------------------------------
+expiry_years = [2018, 2020, 2019]
+
+renewed = [year + 4 for year in expiry_years]
+
+print(renewed)
 
 
 
+# -------------------------------------------------
+# To create a copy like prices_copy of the original list, we set the expression to copy each element without changes, like here with price.
+prices = [10, 38, 40, 58, 62]
+
+prices_copy = [price for price in prices]
+
+print(prices_copy)
+
+# -----------------------------------------------------
+names = ["Smith", "Miller", "Brown"]
+
+prefixed = ["Mr. " + name for name in names]
+print(prefixed)
+
+# ---------------------------------------------------
+# Inside the list comprehension, iterate over the strings in the words list, to count the occurrences of the letter "a".
+
+words = ["apple", "aligator", "abracadabra", "avatar"]
+
+a_count = [word.count("a") for word in words]
+
+print(a_count)
+
+# --------------------------------------------------------------
+prices = [10, 22, 30, 40, 58, 62]
+
+def halve(num):
+  return num/2
+
+halved = [halve(price) for price in prices]
+
+print(halved)
+
+# -------------------------------------------------------------
+Cost_prices = [10, 22, 30, 40, 58, 60]
+
+def halve(num): 
+  no_tax = 0.85 * num
+  return no_tax/2
+
+halved = [halve(price) for price in Cost_prices]
+
+print(halved)
+
+# -----------------------------------------------------------
+
+authors = ["Virginia Wolf", "John Steinbeck"]
+
+def add_comma(name):
+  parts = name.split(" ")
+  return parts[1] + ", " + parts[0]
+
+authors_update = [add_comma(name) for name in authors]
+
+print(authors_update)
+
+# ---------------------------------------------------------------------------
+
+words = ["apple", "aligator", "abracadabra", "avatar"]
+
+def has_double_a(word):
+  count = word.count("a")
+  return count == 2
+
+double_a = [has_double_a(word) for word in words]
+
+print(double_a)
+
+
+# ---------------------------------------------------------------------------
+scores = [40, 12, 83]
+
+def passed(score):
+  with_bonus = score + 10
+  return with_bonus > 90
+
+passing_scores = [passed(score) for score in scores]
+
+print(passing_scores)
+
+# ---------------------------------------------------------------------------
