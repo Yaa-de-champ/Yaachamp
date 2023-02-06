@@ -135,8 +135,11 @@
 # black_love = ["Labadi", "Cashout"]
 # show_next_track(montero)
 # show_next_track(black_love)      
-
+'''
 #tuple helps group related pieces of data
+
+'''
+# ---------------------------------------------tuple--------------------------------------
 
 # movies = ["Black Panther",  "Heros of Today", 2003, 1998]
 # movies_turples = [("Black Panther", 1998), ("Heros of Today", 2003)]
@@ -156,17 +159,19 @@
 
 # another way to create a turple is using the built in function
 
-
-
 # a = tuple('company')
 # print(a)
 # x = tuple(range(4))
 # print(x)
-
+'''
 # a turple is immutable that is one cannot add or modify items once a turple is intialized
 
+'''
+'''
 # a list uses [] while a tuple uses ()
 # for a tuple a single element must also have a comma after it 
+
+'''
 
 # x = (1, 2)
 # m = x
@@ -205,7 +210,7 @@
 # print(min(tuple2))
 # print(set(tuple2)) #the output removed the duplicate 
 
-# converting a tuple to a list
+# converting a list to a tuple
 # list = [1, 2, 3, 5, 8]
 # print(tuple(list))
 # so the output will be (1, 2, 3, 5, 8)
@@ -262,14 +267,27 @@
 # print(8 + 9)
 # # prints out the addition of 8 and 9 which is 17
 
-# import random
-# randnum = random.randint(0, 12)
-# print("The randomly generated number was - " + str(randnum))
+# --------------random to make selections😘-------------------
+import random
+randnum = random.randint(0, 12)
+
+names = ['Nana', 'Cecil', 'Lois']
+randchoice = random.choice(names)
+
+print(f"I choose {randchoice} to pray after group studies")
+
+print("The randomly generated number was " + str(randnum))
+
+# prints out the full sentence then prints out the random name 
 # # prints out the full sentence then prints out a random number between 0 and 12
+
 
 # import random
 # rnum = random.randint(7, 15)
 # print("I expected a higher number such as -" + str(rnum))
+
+# -------------------------------------------------------------------------
+
 
 # print('cabbage', 'carrots', 'fish')
 # # prints out a list with space but no comma 
@@ -412,12 +430,14 @@
 # for i in range(len(fruits)):
 #     print(fruits[i].upper())
 
-# family = {'dad':'homer', 'mom':'marge', 'size':6}
-# for key, value in family.items():
-#      print(key, value)
+family = {'dad':'homer', 'mom':'marge', 'size':6}
+for key, value in family.items():
+     print(key, value)
 
-
+'''
 # # for/else loop
+
+'''
 # fruits = ['apple', 'banana', 'cherry']
 # for fruit in fruits:
 #     if fruit == 'banana':
@@ -438,10 +458,11 @@
 #     return x ** 2
 # square_this(3)
 
-# #removing duplicates from a list
-# grocery_list = ["cabbage", "tomato", "pepper", "cabbage", "onion"]
-# print(set(grocery_list))
+# -----------------------sets-----------------------------
 
+# #removing duplicates from a list
+grocery_list = ["cabbage", "tomato", "pepper", "cabbage", "onion"]
+print(set(grocery_list))
 
 
 # #or we can store the set(grocery_list) in a variable to make it reuseable
@@ -450,10 +471,10 @@
 # print(grocery_set)
 
 
-
 # # just like list we can get the size of a set
 # stationeries = ["pencils", "a reading book", "sharpener", "ruler"]
 # print(len(stationeries))
+
 
 
 
@@ -673,3 +694,9 @@ passing_scores = [passed(score) for score in scores]
 print(passing_scores)
 
 # ---------------------------------------------------------------------------
+
+classlist = {'Safui' : 'Course Rep', 'Nana Yaa' : 'Assitant Course Rep', ' Issabella':' Secretary'}
+
+for i in classlist:
+  print(f"{key[i]} is the {value[i]} of the Bmen Level 200 Class")
+# print(key, value)
