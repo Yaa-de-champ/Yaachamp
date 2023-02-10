@@ -282,6 +282,12 @@ print("The randomly generated number was " + str(randnum))
 # # prints out the full sentence then prints out a random number between 0 and 12
 
 
+import random
+animals = ["cat", "dog"]
+selected_animal = random.choice(animals)
+print("Randomly selected animal:", selected_animal)
+
+
 # import random
 # rnum = random.randint(7, 15)
 # print("I expected a higher number such as -" + str(rnum))
@@ -328,14 +334,14 @@ print("The randomly generated number was " + str(randnum))
 # print(round(3.3))
 # the round function will either round the function up or down depending on what is after the decimal point 
 
-# def marks_data(mark_scores):
-#     highest = max(mark_scores)
-#     lowest = min(mark_scores)
-#     return highest, lowest
+def marks_data(mark_scores):
+    highest = max(mark_scores)
+    lowest = min(mark_scores)
+    return highest, lowest
 
-# mark_scores = [56, 33, 78, 190]
-# data = marks_data(mark_scores)
-# print(data)
+mark_scores = [56, 33, 78, 190]
+data = marks_data(mark_scores)
+print(data)
 
 # def market(items):
 #     smallest = items[0]
@@ -363,13 +369,13 @@ print("The randomly generated number was " + str(randnum))
 #     print("still got more work to do")
     
 
-# results = 40.1
-# if results >= 60:
-#     print("you made it to the next stage")
-# elif results <= 40:
-#     print("sorry you can make it to the next stage")
-# else:
-#     print("still got more work to do")
+results = 40.1
+if results >= 60:
+    print("you made it to the next stage")
+elif results <= 40:
+    print("sorry you can make it to the next stage")
+else:
+    print("still got more work to do")
     
 # results = 6.7
 # if results >= 60:
@@ -700,3 +706,4 @@ classlist = {'Safui' : 'Course Rep', 'Nana Yaa' : 'Assitant Course Rep', ' Issab
 for i in classlist:
   print(f"{key[i]} is the {value[i]} of the Bmen Level 200 Class")
 # print(key, value)
+
