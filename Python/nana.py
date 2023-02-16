@@ -80,3 +80,42 @@ other_info = {
 personal_info.update(other_info)
 print(personal_info) #updates the dictionary
 
+# product = {'category': 'book',
+#            'price': 4.99,
+#            'in_shop': True}
+
+# del product['in_shop']
+# print(product)
+
+# ---------------------------------------------------------------------
+courses = ["thermodynamics", "anatomy", "linear algebra"]
+"""
+print(courses[-1])
+courses[-3]="african studies" #updating the list
+print(courses)
+"""
+
+del courses[-2] #remove an element with a specific index
+print(courses)
+
+# ----------------------------------------
+
+data = ("Nana Yaa", 19, "9th September 2004")
+name = data[0]
+age = data[1]
+date_of_birth = data[2]
+
+print(f"My name is {name},I am {age} years of age. I was born on {date_of_birth}")
+
+# =------------------------------------------------------------
+
+cake_ingredients = ['eggs', 'flour', 'milk','flavour', 'margarine']
+print(cake_ingredients[0:2]) #remember the last index will not be part
+print(cake_ingredients[1:])
+print(cake_ingredients[3:])
+print(cake_ingredients[:2])
+
+# We can also use a format with two colons, [start:stop:step] , where step determines how Python steps between start and end.
+
+print(cake_ingredients[1:4:2])
+print(cake_ingredients[::2])
