@@ -5,7 +5,6 @@
 - 🌱 I’m currently learning some programming languages such as HTML & CSS, Python, JavaScript and C programming as skills.
 - 👩‍🦰 I'm into research. My main research area is Quantum Chemistry.
 - 👯 I’m looking forward to collaborating on any fun project and web development projects involving the programming languages I have mentioned above.
-- 🤔 I’m looking for help with how to create and implement Machine Learning or Artificial Intelligence Projects (using Python)
 - 💬 Let's connect on [Linkedin](https://www.linkedin.com/in/nana-yaa-adomaa-doku-amponsah-078854235)
 - 📫 How to reach me: Through my personal and active [Email](dokuamponsahnanayaaadomaa@gmail.com)
 - 😄 Pronouns: She/Her
