@@ -703,7 +703,7 @@ print(passing_scores)
 
 classlist = {'Safui' : 'Course Rep', 'Nana Yaa' : 'Assitant Course Rep', ' Issabella':' Secretary'}
 
-for i in classlist:
-  print(f"{key[i]} is the {value[i]} of the Bmen Level 200 Class")
-# print(key, value)
+for key, value in classlist.items():
+  print(f"{key} is the {value} of the Bmen Level 200 Class")
+print(key, value)
 

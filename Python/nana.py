@@ -119,3 +119,51 @@ print(cake_ingredients[:2])
 
 print(cake_ingredients[1:4:2])
 print(cake_ingredients[::2])
+
+name = "Nana Yaa"
+for char in name:
+    print(char)
+
+
+countries = ["France", "Ghana", "Germany", "England"]
+for country in countries:
+    print(country)
+    if country == "Germany":
+        break
+
+# ----------------------------------------
+names = ["Nana", "Ama", "Kwame"]
+scores = [95,  75, 50]
+grades = ["A", "B+", "D"]
+
+for name, score, grade in zip(names, scores, grades):
+    print(f'{name} had {score} percent in the Thermodynamics Exams. She will see grade {grade} in her records.')
+
+
+# -------------------------------------------
+# begining with classes
+
+class Car:
+    color = "Black"
+    print(color)
+    brand = "Buggati"
+
+class Phones:
+    water_resistant = True
+    case_colour = "Pink"
+tecno = Phones()
+print(tecno.case_colour)
+print(tecno.water_resistant)
+# Phones is the definition of the class, water_resistant is the variable, tecno is an instance of the class Phones, to access a class variable we use the format class.variable
+
+
+class Champion:
+    name = "Nana"
+    age = 19
+
+    def introduce(self):
+        print("Hi!")
+        print("I am " + self.name) 
+Nana = Champion()
+Nana.introduce()
+print(Nana.age)
