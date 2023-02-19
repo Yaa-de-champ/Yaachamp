@@ -143,7 +143,9 @@ for name, score, grade in zip(names, scores, grades):
 # -------------------------------------------
 # begining with classes
 
-class Car:
+# class names have their first letter capitalized
+
+class Cars:
     color = "Black"
     print(color)
     brand = "Buggati"
@@ -166,4 +168,116 @@ class Champion:
         print("I am " + self.name) 
 Nana = Champion()
 Nana.introduce()
-print(Nana.age)
+# print(Nana.age)
+
+class Fav_Pet:
+    def __init__(self, color, legs):
+        self.color = color
+        self.legs = legs
+spooky = Fav_Pet("Brown", 4)
+print(spooky.color)
+print(spooky.legs) 
+'''
+# In Python, self is a reference to the instance of a class that is being created. When defining a class, the __init__ method is used to initialize the instance of the class. The self parameter is the first parameter of the __init__ method and is used to refer to the instance being created.
+# the keyword self is used to access class variables or methods inside the class definition
+'''
+
+# class MyFlower:
+#     def __init__(self, kind, color):
+#         self.kind = kind
+#         self.color = color
+        
+#     def display_color(self):
+#         print(self.color)
+
+# flamboyant_flower =MyFlower("Flamboyant", "Orange")
+# print(flamboyant_flower.kind)
+# flamboyant_flower.display_color()
+
+class MyCar:
+    def __init__(self, looks, brand, color):
+        self.looks = looks
+        self.brand = brand
+        self.color = color
+    def CarColor(self):
+        print(self.color)
+
+Nanas_Car = MyCar("sleek", "Toyota", "black")
+print(Nanas_Car.looks)
+print(Nanas_Car.brand)
+Nanas_Car.CarColor()
+
+
+# ============================================SENG207================================================
+#  SECTION ONE
+# 1. Define a class for Person
+# 2. Create a person object from the Person class
+# 3. Use the constructor method to define attribute for the Person class
+# 4. Write a full_name method that returns the full name of the object
+
+'''
+there are two ways in doing this: one will use return function (from instruction above) and one will use print function(my trial)'''
+# 1st way
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+    def full_name(self):
+        return  self.first_name + ' ' + self.last_name
+        
+# creating person object
+person = Person("Nana Yaa", "Doku-Amponsah")
+# printing the full name
+print(person.full_name())
+print(person.first_name)
+print(person.last_name)
+
+# 2nd way
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+    def full_name(self):
+        print(self.first_name + ' ' + self.last_name)
+
+# creating person object
+person = Person("Nana Yaa", "Doku-Amponsah")
+# printing the full name
+print(person.first_name)
+print(person.last_name)
+person.full_name()
+
+# ===========================================================================
+        
+class Mum_Pastries:
+    def __init__(self, shape, pastry):
+        self.shape = shape
+        self.pastry = pastry
+
+    def somePastries(self):
+        for p in self.pastry:
+            print(p)
+
+myChoice = Mum_Pastries("round",["apple", "orange", "strawberry", "Pear"])
+myChoice.somePastries()
+
+# -------------------------------------------------------------------
+        
+class Book_Series:
+ def __init__(self, name, books):
+    self.name = name
+    self.books = books
+    self.num_books = len(books)
+
+ def print_name(self):
+    print(self.name)    
+  
+ def print_books(self):
+    print(self.books)
+
+hg = Book_Series("Hunger Games", ["The Hunger Games", "Catching Fire", "Mockingjay"])
+
+hg.print_books()
+print(hg.num_books)
+
