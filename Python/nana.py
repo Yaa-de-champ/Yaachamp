@@ -182,17 +182,18 @@ print(spooky.legs)
 # the keyword self is used to access class variables or methods inside the class definition
 '''
 
-# class MyFlower:
-#     def __init__(self, kind, color):
-#         self.kind = kind
-#         self.color = color
+class MyFlower:
+    def __init__(self, kind, color):
+        self.kind = kind
+        self.color = color
         
-#     def display_color(self):
-#         print(self.color)
+    def display_color(self):
+        print(self.color)
 
-# flamboyant_flower =MyFlower("Flamboyant", "Orange")
-# print(flamboyant_flower.kind)
-# flamboyant_flower.display_color()
+flamboyant_flower =MyFlower("Flamboyant", "Orange")
+print(flamboyant_flower.kind)
+flamboyant_flower.display_color()
+
 
 class MyCar:
     def __init__(self, looks, brand, color):
@@ -281,3 +282,177 @@ hg = Book_Series("Hunger Games", ["The Hunger Games", "Catching Fire", "Mockingj
 hg.print_books()
 print(hg.num_books)
 
+# --------------------------------------------------functions-----------------------------
+def greet(name):
+    print("Hello, " + name + "!")
+greet("Nana Yaa")
+
+def greet(name, greeting):
+    print(greeting + " , " + name + "!")
+greet("Cecil", "Hiiii")
+greet(greeting="Hi",  name="Kwame")
+
+
+# ---------------------------------------------------------------------
+def greet(name="world", greeting="Hello"):
+    print(greeting + "," + name + "!")
+greet()
+greet("Alice")
+
+# -------------------------------------------------------------------------
+def add(x, y):
+    return x + y
+result = add(56, 78)
+print(result)
+
+# -----------------------------------------------------------------------
+
+def sum(x, *y):
+    total = x
+    for value in y:
+        total += value
+    return total
+result = sum(1, 2, 3, 5)
+print(result)
+
+# =======================================================================
+
+def outer(x):
+    y = 10
+
+    def inner(z):
+        return x + y + z
+
+    return inner
+
+result = outer(5)(7)
+print(result)
+
+# ==================================================================================
+
+add = lambda x, y: x + y
+result = add(5, 9)
+print(result)
+
+# ------------------------------------------------------------------------------------
+
+def apply(func, x, y):
+    return func(x, y)
+def add(x, y):
+    return x + y
+
+result = apply(add, 45, 10)
+print(result)
+
+# -----------------------------------------------------------------------------------------------
+# def logger(func):
+#     def wrapper(*args, **kwargs):
+#         print("Calling function:", func.__name__)
+#         result = func(*args, **kwargs)
+#         print("Result:", result)
+#         return result
+#     return wrapper
+
+# @logger
+# def add(x, y):
+#     return x + y
+
+print(add(3, 5)) #dont understand this lines of code
+
+# ==========================================================================================================
+
+# def outer(x):
+#     y = 10
+
+#     def inner(z):
+#         return x + y + z
+
+#     return inner
+# add = outer(5)
+result = add(7)
+
+# def outer(x):
+#     def inner(y):
+#         def innermost(z):
+#             return x + y + z
+#         return innermost
+#     return inner
+
+# add = outer(8)(7)
+# result = add(7)
+
+
+# # -------------------------------------------------------------------------------------------------------------------
+def getDistance(mph, h):
+    return mph*h
+mph = 60
+h = 2
+
+distance = getDistance(mph, h)
+print(distance)
+
+class Car:
+    mileage = 12000
+
+    def drive(self, miles):
+        self.mileage += miles
+
+tesla = Car()
+tesla.drive(100)
+print(tesla.mileage)
+
+
+class Dog:
+    hungry = True
+
+    def eat(self): #eat() was used to update the value of hungry
+        self.hungry= False
+dog = Dog()
+dog.eat() 
+print(dog.hungry)
+
+#without line 411 the output was True but with line 411 the output is False............interesting
+
+# ===========================================================================================
+#creating a virtual piggy bank🥰🥰
+class Piggy:
+    value = 0
+    
+    def addMoney(self, amount):
+        self.value = self.value + amount
+
+myPiggy = Piggy()
+myPiggy.addMoney(300)
+
+print(myPiggy.value)
+
+# =------------------------------------------------------------------------------------------------------------------------------
+class Fav_Books:
+    def __init__(self, types, num_pages, author):
+        self.types = types
+        self.num_pages = num_pages
+        self.shape = "cubic"
+        self.author = author
+    def num_of_pages(self):
+        print(self.num_pages)
+# Books = Fav_Books("science fictions", 123)
+# Books = Fav_Books("Maths Book", 345)
+Books = Fav_Books("literature", 600, "Dr.Kumi Ashong")
+
+# Books.num_of_pages()
+print(Books.types)
+print(Books.num_pages)
+print(Books.shape)
+print(Books.author)
+
+
+
+class Elevator:
+    def __init__(self, starting_floor):
+        self.make ="The Elevator company"
+        self.floor = starting_floor
+# to create the object
+
+elevator = Elevator(1)
+print(elevator.make)
+print(elevator.floor)
