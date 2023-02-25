@@ -369,7 +369,7 @@ print(add(3, 5)) #dont understand this lines of code
 
 #     return inner
 # add = outer(5)
-result = add(7)
+# result = add(7)
 
 # def outer(x):
 #     def inner(y):
@@ -402,16 +402,8 @@ tesla.drive(100)
 print(tesla.mileage)
 
 
-class Dog:
-    hungry = True
 
-    def eat(self): #eat() was used to update the value of hungry
-        self.hungry= False
-dog = Dog()
-dog.eat() 
-print(dog.hungry)
 
-#without line 411 the output was True but with line 411 the output is False............interesting
 
 # ===========================================================================================
 #creating a virtual piggy bank🥰🥰
@@ -456,3 +448,151 @@ class Elevator:
 elevator = Elevator(1)
 print(elevator.make)
 print(elevator.floor)
+
+
+
+# =============================================================================================
+
+class Dog:
+    name = "Scooby"
+    hungry = True
+
+    def eat(self): #eat() was used to update the value of hungry
+        self.hungry= False
+
+dog = Dog()
+
+dog.eat() 
+print(dog.hungry)
+
+# =============================================================================================================
+class Rectangle:
+    base = 12
+    height = 3
+
+    def getArea(self): #getArea here is a method
+        return self.base * self.height
+rect = Rectangle()
+area = rect.getArea()
+print(area)
+
+
+class Person:
+    name = "Nana"
+
+    def greet(self): #greet here is a method
+        print(f"Hiiii!")
+
+p = Person()
+p.greet()
+
+
+# -------------inheriting a class ----------------------
+
+class Car:
+    def start_car(self):
+        print("Starting Car")
+
+class Hybrid(Car):
+    def charge(self):
+        print("Using fuel to charge battery")
+
+prius = Hybrid()
+prius.start_car()
+prius.charge()
+
+# ------------------------------------------------------------------------------
+
+class Parent:
+    def __init__(self):
+        self.eyes="green"
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.age = 7
+child = Child()
+print(child.eyes)
+print(child.age)
+
+# __init__ : Classes contain a method called a constructor that sets the properties of new objects, known as instances.
+
+
+# ---------------------------------------------------------------------------------------------------------
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+Nana = Person("Nana", 19)
+print(f'{Nana.name} is {Nana.age} years old')
+
+# ============================================================================
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Good Afternoon")
+
+class Doctor(Person):
+    def __init__(self, name, age):
+        super().__init__("Dr." + name, age)
+
+    def intro(self):
+        print(f" I'm {self.name}, I work at Rigde Hospital Accra")
+
+person1 = Doctor("Doku-Amponsah", 23)
+person2 = Doctor("Hayibor", 34)
+
+person1.greet()
+person1.intro()
+
+person2.greet()
+person2.intro()
+
+# =================================================================================================
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print("Hi!")
+
+class Student(Person):
+    def __init__(self, name, age, major):
+        super().__init__(name, age)
+        self.major = major
+
+student = Student("Nana Yaa", 19, "Biomedical Engineering")
+
+print(student.major)
+student.greet()
+print(f'My name is {student.name} and I major in {student.major}')
+
+# ================================================================================================
+# __init__ is a class method that sets the properties of instances
+
+class Phone:
+    def call(self, contact):
+        print("Calling " + contact)
+
+phone = Phone()
+phone.call( "Mummy\n")
+
+
+class Employee:
+    def __init__(self, company):
+        self.company = company
+class Developer(Employee):
+    def __init__(self, company, language):
+        super().__init__(company)
+        self.language = language
+dev = Developer("Microsoft", "Python Language")
+
+print(dev.language)
+print(f'I will like to work in the {dev.company} company oneday, so I am intensively learning {dev.language}')
