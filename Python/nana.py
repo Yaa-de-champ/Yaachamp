@@ -596,3 +596,134 @@ dev = Developer("Microsoft", "Python Language")
 
 print(dev.language)
 print(f'I will like to work in the {dev.company} company oneday, so I am intensively learning {dev.language}')
+
+
+# ==========================================================================================
+class Person:
+    def my_self():
+        my_info= {
+            
+            'Name':'Nana Yaa',
+            'Age': 19,
+            'Email': 'dokuamponsah123@gmail.com'
+        }
+        return my_info['Age'], my_info['Email'], my_info['Name']
+    pass
+    
+    
+print(Person.my_self())
+# ----------------------------------------------------------------------------------------------
+
+class IceCreamMaker:
+    def churn(self):
+        print('Churning cream')
+    def freeze(self):
+        print('Freezing cream')
+
+    def makeIceCream(self):
+        self.churn()
+        self.freeze()
+iceCreamMaker = IceCreamMaker()
+
+iceCreamMaker.makeIceCream()
+
+
+
+# =======================================================================================================
+
+class Translator:
+    def record(self):
+        print('Recording audio')
+    def transcribeRecording(self):
+        print('Converting audio to text')
+    def translateText(self):
+        print('Translating text')
+    def translateLive(self):
+        self.record()
+        self.transcribeRecording()
+        self.translateText()
+translator = Translator()
+translator.translateLive()
+
+# =============================================================================================
+
+class Slideshow:
+    def __init__(self, slides):
+        self.slides = slides
+        self.current = 1
+    def viewNextSlides(self):
+        self.current += 1
+    def play(self):
+        while self.current <= self.slides:
+            print('Slide', self.current)
+            self.viewNextSlides()
+slideshow = Slideshow(5)
+slideshow.play()
+
+
+# *********Polymorphism in classes**********************************************************************************************************************
+class Feline:
+    def speak(self):
+        print('Meow')
+class Cat(Feline):
+    def lick(self):
+        print('licking paw')
+cat = Cat()
+cat.speak()
+# cat.lick()
+
+class Feline:
+    def speak(self):
+        print('Meow')
+class Cat(Feline):
+    def lick(self):
+        print('licking paw')
+class Lion(Feline):
+    def prey(self):
+        print('pounces on prey')
+
+    def speak(self):
+            print('ROARRR!!')
+cat = Cat()
+cat.speak()
+lion = Lion()
+lion.speak()
+
+class Car:
+    def drive(self):
+        print('Vroomm!')
+class Electric(Car):
+    def drive(self):
+        print('Whirrrr!')
+tesla = Electric()
+tesla.drive()
+
+class Person:
+    def greet(self):
+        print('hello!')
+class Professor(Person):
+    def greet(self):
+        print('salutations')
+professor = Professor()
+professor.greet()
+
+class Bird:
+    def speak(self):
+        print('Chirp')
+class Duck(Bird):   
+    def speak(self):   #Overrides the method at the subclass level 
+        print('Quack')
+duck = Duck()
+duck.speak()
+
+class Bird:
+    def speak(self):
+        print("Chirp")
+
+class Duck(Bird):
+    def speak(self):
+        print("Quack")
+duck1 = Duck()
+duck2 = Duck()
+duck2.speak()
+duck1.speak()
