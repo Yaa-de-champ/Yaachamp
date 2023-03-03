@@ -727,3 +727,43 @@ duck1 = Duck()
 duck2 = Duck()
 duck2.speak()
 duck1.speak()
+
+# ===========================================================================================
+
+
+# In Python, *args and **kwargs are special syntax used to pass a variable number of arguments to a function.
+# *args allows you to pass a variable number of positional arguments to a function. When you use *args in a function definition, it means that the function can accept any number of arguments, and those arguments will be collected into a tuple. Here's an example:
+
+
+def my_func(*args):
+    for arg in args:
+        print(arg)
+        
+my_func(1, 2, 3)  # Output: 1 2 3
+# **kwargs allows you to pass a variable number of keyword arguments to a function. When you use **kwargs in a function definition, it means that the function can accept any number of keyword arguments, and those arguments will be collected into a dictionary. Here's an example:
+
+
+def my_func(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+        
+my_func(a=1, b=2, c=3)  # Output: a: 1 b: 2 c: 3
+# You can also use *args and **kwargs together in a function definition. In this case, the positional arguments are collected into a tuple, and the keyword arguments are collected into a dictionary. Here's an example:
+
+
+def my_func(*args, **kwargs):
+    for arg in args:
+        print(arg)
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+        
+my_func(1, 2, 3, a=4, b=5, c=6)
+# Output:
+# 1
+# 2
+# 3
+# a: 4
+# b: 5
+# c: 6
+# Using *args and **kwargs in your functions can make them more flexible and allow them to handle a wider range of inputs.
+
