@@ -70,3 +70,34 @@
 
 import math as m
 print(m.floor(44.32))
+
+# ---------------------------detecting errors---------------------------------------
+
+# details = {'name': "Paul", 'score':55}
+# try:
+#     details['email']
+# except:
+#     raise KeyError('email not found in the dictionary')
+
+
+access = ['John', 'Aziz', 'Cecil', 'Fred']
+member = 'Jennifer'
+if member not in access:
+    raise LookupError('member not recognised')
+
+
+details = {
+    'name': 'Nana Yaa',
+    'occupation': 'Engineer',
+    'age': 23
+}
+try:
+    age = details['age']
+except:
+    raise NameError('No age value in record')
+
+else:
+    print(f'Maximum heart rate is{220 - age}')
+
+
+
