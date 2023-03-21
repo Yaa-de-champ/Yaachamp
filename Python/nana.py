@@ -767,3 +767,191 @@ my_func(1, 2, 3, a=4, b=5, c=6)
 # c: 6
 # Using *args and **kwargs in your functions can make them more flexible and allow them to handle a wider range of inputs.
 
+try:
+    x =int(input('Enter a number'))
+    y = int(input('Enter another number:'))
+    result = x/y
+    print('The result is:', result)
+except(ZeroDivisionError, ValueError)  as e:
+    print('An error occured:', e)
+except TypeError:
+    print('Type error occured')
+except Exception as e:
+    print('Unknown error occured:', e)
+
+entry = int(input('Enter a number:'))
+
+try:
+    result = entry * 1.5
+except:
+    raise ValueError('result cannot be calculated')
+else:
+    print(result)
+finally:
+    print('Try another value')
+
+count = '7'
+try:
+    10/count
+except:
+    raise ValueError('Count is not valid')
+
+
+users = [ ]
+try:
+    allocation =  100 /len(users)
+except:
+    raise ValueError('No users found')
+
+
+try:
+    print('message')
+except:
+    pass
+print('Thank You')
+
+
+
+weight = -5
+if weight < 0:
+    raise ValueError('Weight cannot be negative')
+
+cost = 50
+try:
+    dollars = cost * 1.5
+except:
+    raise Exception('Calculation not possible')
+else:
+    euros = cost * 1.1 
+print(euros)
+
+score_a = 5
+score_b = 3
+
+
+try:
+    multiplier = score_a/score_b
+except:
+    multiplier = 'Cannot be calculated'
+finally:
+    print(multiplier)
+
+# =======================================================================
+
+class Pet:
+    def __init__(self, name, animal_type, age):
+        self.__name = name
+        self.__animal_type = animal_type
+        self.__age = age
+
+    def set_name(self, name):             
+        self.__name = name
+
+    def  set_animal_type(self, animal_type):
+        self.__animal_type = animal_type
+
+    def set_age(self, age):
+        self.__age = age
+
+    def get_name(self):
+        return self.__name
+    def get_animal_type(self):
+        return self.__animal_type
+    def get_age(self):
+        return self.__age
+    
+my_pet = Pet('', '', 0)
+
+name = input('Enter the name of your pet: ')
+animal_type = input('Enter the type of animal that your pet is: ')
+age = int(input('Enter the age of your pet: '))
+
+my_pet.set_name(name)
+my_pet.set_animal_type(animal_type)
+my_pet.set_age(age)
+
+print(" Your pet's name is ", my_pet.get_name())
+print("Your pet is a", my_pet.get_animal_type())
+print("Your pet is ", my_pet.get_age(), "years old")
+
+
+# =========================================================================
+
+class Car:
+    def __init__(self, year_model, make):
+        self.__year_model = year_model
+        self.__make = make
+        self.__speed = 0
+
+    def accelerate(self, __speed):
+        self.__speed += 5
+    def brake(self, __speed):
+        self.__speed -= 5
+
+    def get_speed(self, __speed):
+        return self.__speed
+    
+my_car = Car(2022, 'Nissan')
+
+# to call the accelerate method five times and display the speed after each call, a loop can be used
+
+for i in range(5):
+    my_car.accelerate()
+    print('Current speed: ', my_car.get_speed())
+
+# to call brake five times and display the current speed after each call, we can use another loop
+for i in range(5):
+    my_car.brake()
+    print('Current speed: ', my_car.get_speed())
+
+
+# ====================================================================================
+class PersonalData:
+    def __init__(self, name, address, age, phone_number):
+        self.name = name
+        self.address = address
+        self.age = age
+        self.phone_number = phone_number
+    
+    # Accessor methods
+    def get_name(self):
+        return self.name
+    
+    def get_address(self):
+        return self.address
+    
+    def get_age(self):
+        return self.age
+    
+    def get_phone_number(self):
+        return self.phone_number
+    
+    # Mutator methods
+    def set_name(self, name):
+        self.name = name
+    
+    def set_address(self, address):
+        self.address = address
+    
+    def set_age(self, age):
+        self.age = age
+    
+    def set_phone_number(self, phone_number):
+        self.phone_number = phone_number
+
+
+# program that creates three instances of this class:
+
+# Create the first instance with your own personal data
+my_data = PersonalData("Your Name", "Your Address", 25, "123-456-7890")
+
+# Create two more instances for your friends or family members
+friend1_data = PersonalData("Friend1 Name", "Friend1 Address", 30, "111-222-3333")
+friend2_data = PersonalData("Friend2 Name", "Friend2 Address", 35, "444-555-6666")
+
+
+
+# Accessor example: Get the name for your personal data
+print("My name is:", my_data.get_name())
+# Mutator example: Change the phone number for friend1's data
+friend1_data.set_phone_number("777-888-9999")
