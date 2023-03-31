@@ -582,7 +582,7 @@ class Phone:
         print("Calling " + contact)
 
 phone = Phone()
-phone.call( "Mummy\n")
+# phone.call( "Mummy\n")
 
 
 class Employee:
@@ -955,3 +955,51 @@ friend2_data = PersonalData("Friend2 Name", "Friend2 Address", 35, "444-555-6666
 print("My name is:", my_data.get_name())
 # Mutator example: Change the phone number for friend1's data
 friend1_data.set_phone_number("777-888-9999")
+
+# ------------------------------------------------------------------
+Max_Temp = 102.5
+
+temperature = float(input("Enter the substance's Celsius temperature: "))
+
+while temperature > Max_Temp:
+    print('The temperature is too high')
+    print('Turn the thermostat down and wait')
+    print('5 minutes. Then take the temperature')
+    print('again and enter it')
+    temperature = float(input('Enter the new Celcius temperature: '))
+
+print('The temperature is acceptable')
+print('Check it again in 15 minutes.')
+
+count = 10
+while count < 1:
+    print('HELLOOOO')
+print("I'm heree")
+
+#while runs a conditon if it is true
+
+for number in range(2, 6):
+    print(number)
+
+for number in range(10, 5, -1):
+    print('Heyyy')
+    print(number)
+
+# -----------------------------------------------------------------------------------------------
+for num in range(0, 1000, 10):
+    print(num)
+
+budgeted_amount = float(input('Enter your budgeted_amount:'))
+total = 0
+
+while True:
+    expenses = float(input('Enter your expenses at the end of the month:'))
+    if expenses == "":
+        break
+    total += expenses
+    
+print(total)
+if total>budgeted_amount:
+    print("Dear user, you have over budgeted")
+elif total<budgeted_amount:
+    print('Dear user, you are under budget')
