@@ -1003,3 +1003,32 @@ if total>budgeted_amount:
     print("Dear user, you have over budgeted")
 elif total<budgeted_amount:
     print('Dear user, you are under budget')
+
+# ====================================================================================================================================
+
+class Contact:
+    def __init__(self, name, phone, email):
+        self.__name = name
+        self.__phone = phone
+        self.__email = email
+    def set_name(self, name):
+        self.__name = name
+    def set_phone(self, phone):
+        self.__phone = phone
+
+    def get_name(self):
+        return self.__name
+    def get_phone(self):
+        return self.__phone 
+    def get_email(self):
+        return self.__email
+    
+    def __str__(self):
+        return f'Name: {self.__name}\n' + \
+                f'Phone:{self.__phone}\n' + \
+                f'Email: {self.__email}'
+    
+nana = Contact('Nana Yaa', '0570046841', 'dokuamponsah@gmail.com')
+print(nana.get_name())
+print(nana.get_phone())
+
