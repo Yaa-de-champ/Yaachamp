@@ -1,6 +1,6 @@
-body {
-    background-color: blanchedalmond;
-    font-family: "Times New Roman";
+/* body {
+    background-color: white;
+    font-family: "sans-serif";
     font-style: italic;
     
 }
@@ -9,11 +9,12 @@ h1 {
     color: darkblue;
     text-align: center;
     
+    
 }
 img {
-    border-radius: 10px;
-    margin-top: 8px;
-    margin-left: 2px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 4px;
     margin-right: 2px;
 }
 .gray-element {
@@ -93,4 +94,70 @@ img {
     margin-right: 10px;
     height: 75px;
     width: 75px;
+} */
+
+/* #latest {
+    background-color: aquamarine;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: rgb(255,0, 0);
+    color: hsl(0, 100%, 50%);
+} */
+
+/* #blog h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} */
+
+/* #blog div h1 {
+    color: blue;
+    text-align: center;
+    text-align: justify;
+    text-align: left;
+    text-align: right;
+}
+
+p { 
+    text-decoration-line: underline;
+    text-decoration-color: red;
+    text-decoration-style: solid;
+    text-decoration-thickness: 5px;
+} */
+
+.parent{
+    border: 4px solid green;
+}
+
+.child {
+    width: 50%;
+    padding: 20px;
+    border: 4px solid gray;
+    float: right;
+    margin: auto;
+}
+
+body {
+    background-color: #E0E0E2 ;
+   
+}
+h1 {
+    color:#721817 ;
+}
+h2 {
+    color: #721817;
+}
+.center-text{
+    text-align: center;
+}
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h2 > span {
+  color: #FA9F42;
+  font-size: 0.75em;
+}
+#copyright {
+    padding-top: 12px;
+    font-size : 0.75em;
 }
