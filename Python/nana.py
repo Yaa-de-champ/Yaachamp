@@ -1030,7 +1030,7 @@ class Patient:
         return f'{self.name_of_emergency_contact} - {self.phonenumber_emergency_contact}'
 
 
-class Procedure(Patient):
+class Procedure:
     def __init__(self, procedure_name, procedure_date, procedure_practioner, procedure_charges):
         self.procedure_name = procedure_name
         self.procedure_date = procedure_date
