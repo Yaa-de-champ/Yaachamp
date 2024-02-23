@@ -1006,29 +1006,26 @@ elif total<budgeted_amount:
 
 # ====================================================================================================================================
 
-class Contact:
-    def __init__(self, name, phone, email):
-        self.__name = name
-        self.__phone = phone
-        self.__email = email
-    def set_name(self, name):
-        self.__name = name
-    def set_phone(self, phone):
-        self.__phone = phone
+class Patient:
+    def __init__(self, first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact):
 
-    def get_name(self):
-        return self.__name
-    def get_phone(self):
-        return self.__phone 
-    def get_email(self):
-        return self.__email
-    
-    def __str__(self):
-        return f'Name: {self.__name}\n' + \
-                f'Phone:{self.__phone}\n' + \
-                f'Email: {self.__email}'
-    
-nana = Contact('Nana Yaa', '0570046841', 'dokuamponsah@gmail.com')
-print(nana.get_name())
-print(nana.get_phone())
+        self.first_name = first_name
+        self.middle_name = middle_name
+        self.last_name = last_name
+        self.address = address
+        self.city = city
+        self.state = state
+        self.phone_number = phone_number
+        self.name_of_emergency_contact = name_of_emergency_contact
+        self.phonenumber_emergency_contact = phonenumber_emergency_contact
 
+        
+class Procedure(Patient):
+    def __init__(self, first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact, procedre_name, procedure_date, procedure_practioner, procedure_charges):
+        super().__init__(first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact)
+        self.procedure_name = procedre_name
+        self.procedure_date = procedure_date
+        self.procedure_practioner = procedure_practioner
+        self.procedure_charges = procedure_charges
+
+        
