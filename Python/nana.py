@@ -875,7 +875,7 @@ print("Your pet is a", my_pet.get_animal_type())
 print("Your pet is ", my_pet.get_age(), "years old")
 
 
-# =========================================================================
+# ================================================================================================================================================================================
 
 class Car:
     def __init__(self, year_model, make):
@@ -905,7 +905,7 @@ for i in range(5):
     print('Current speed: ', my_car.get_speed())
 
 
-# ====================================================================================
+# ========================================================================================================================================================================================
 class PersonalData:
     def __init__(self, name, address, age, phone_number):
         self.name = name
@@ -1004,10 +1004,10 @@ if total>budgeted_amount:
 elif total<budgeted_amount:
     print('Dear user, you are under budget')
 
-# ====================================================================================================================================
+# ======================================================================================================================================================================================
 
 class Patient:
-    def __init__(self, first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact):
+    def __init__(self, first_name, middle_name, last_name, address, city, state, zipcode, phone_number, name_of_emergency_contact, phonenumber_emergency_contact):
 
         self.first_name = first_name
         self.middle_name = middle_name
@@ -1015,17 +1015,99 @@ class Patient:
         self.address = address
         self.city = city
         self.state = state
+        self.zipcode = zipcode
         self.phone_number = phone_number
         self.name_of_emergency_contact = name_of_emergency_contact
         self.phonenumber_emergency_contact = phonenumber_emergency_contact
 
-        
+    def get_full_name(self):
+        return f'{self.first_name} {self.middle_name} {self.last_name}'
+    
+    def get_address(self):
+        return f'{self.address}, {self.city}, {self.state}, {self.zipcode}'
+
+    def get_emergency_contact_info(self):
+        return f'{self.name_of_emergency_contact} - {self.phonenumber_emergency_contact}'
+
+
 class Procedure(Patient):
-    def __init__(self, first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact, procedre_name, procedure_date, procedure_practioner, procedure_charges):
-        super().__init__(first_name, middle_name, last_name, address, city, state, phone_number, name_of_emergency_contact, phonenumber_emergency_contact)
-        self.procedure_name = procedre_name
+    def __init__(self, procedure_name, procedure_date, procedure_practioner, procedure_charges):
+        self.procedure_name = procedure_name
         self.procedure_date = procedure_date
         self.procedure_practioner = procedure_practioner
         self.procedure_charges = procedure_charges
 
+    def __str__(self):
+        return f'Procedure Name: {self.procedure_name}\n Date: {self.procedure_date}\n Practitioner: {self.procedure_practioner}\n Charge: ${self.procedure_charges: .2f}'
         
+
+patient_data = {
+    'first_name': 'Nana Yaa',
+    'middle_name': 'Adomaa',
+    'last_name':'Doku-Amponsah',
+    'address': '457 Royal Avenue',
+    'city': 'Accra',
+    'state': 'GA',
+    'zipcode': '123',
+    'phone_number': '057-004-6841',
+    'name_of_emergency_contact': 'Prof.Kwabena Doku',
+    'phonenumber_emergency_contact': '020-516-4254'
+}
+
+patient = Patient(**patient_data)
+
+procedure1 = Procedure('Physical Exam', '2024-02-23',  'Dr.Adwoa Agyei', 250.00)
+procedure2 = Procedure('X-ray', '2024-02-23','Dr.Kumi Green', 500.00)
+procedure3 = Procedure('Blood Test', '2024-02-23', 'Dr.Francis Ofori-Atta', 200.00)
+
+print("Patient Information:")
+print("Name:", patient.get_full_name())
+print("Address: ", patient.get_address())
+print('Emergency contact:', patient.get_emergency_contact_info())
+print()
+
+
+print("Procedure Information:")
+print("Procedure #1")
+print(procedure1)
+print()
+print("Procedure #2")
+print(procedure2)
+print()
+print("Procedure #3")
+print(procedure3)
+print()
+
+total_charges = procedure1.procedure_charges + procedure2.procedure_charges + procedure3.procedure_charges
+print("Total Charges for all Procedures: $%.2f" % total_charges)
+
+
+# # output is 
+# Patient Information:
+# Name: Nana Yaa Adomaa Doku-Amponsah
+# Address:  457 Royal Avenue, Accra, GA, 123
+# Emergency contact: Prof.Kwabena Doku - 020-516-4254
+
+# Procedure Information:
+# Procedure #1
+# Procedure Name: Physical Exam
+#  Date: 2024-02-23
+#  Practitioner: Dr.Adwoa Agyei
+#  Charge: $ 250.00
+
+# Procedure #2
+# Procedure Name: X-ray
+#  Date: 2024-02-23
+#  Practitioner: Dr.Kumi Green
+#  Charge: $ 500.00
+
+# Procedure #3
+# Procedure Name: Blood Test
+#  Date: 2024-02-23
+#  Practitioner: Dr.Francis Ofori-Atta
+#  Charge: $ 200.00
+
+# Total Charges for all Procedures: $950.00
+
+
+# =================================================================================================================================================================
